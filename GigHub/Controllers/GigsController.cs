@@ -27,6 +27,7 @@ namespace GigHub.Controllers
 
         [Authorize] //to allow only authorize users 
         [HttpPost] //Action be called only by HttpPost method
+        [ValidateAntiForgeryToken]
         public ActionResult Create(GigFormViewModel viewModel)
         {
             if (!ModelState.IsValid)
